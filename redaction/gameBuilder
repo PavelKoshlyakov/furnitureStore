@@ -1,0 +1,61 @@
+let canvas = document.getElementById("gameBoard");
+let socket = new WebSocket('ws://localhost:3000');  //Установка соединения с сокет-сервером
+
+//Поля ввода параметров
+let widthInput = document.getElementById('width');
+let heightInput = document.getElementById('height');
+let button = document.getElementById('button');
+let button_size = document.getElementById("button_size");
+let username = document.getElementById("username").innerText;
+
+canvas.style.backgroundColor = 'black';
+
+button_size.onclick = function () {
+  socketSendMessage(JSON.stringify({
+      operation: "size",
+      username: username,
+      width: widthInput.value,
+      height: heightInput.value
+  }))
+};
+
+//Отправка сообщения по web-socket
+let socketSendMessage = function (data) {
+    if (!socket.readyState) {
+        setTimeout(function () {
+            socketSendMessage(data);
+        }, 100);
+    } else {
+        socket.send(data);
+    }
+};
+
+
+socketSendMessage(JSON.stringify({
+    operation: "image_background",
+    username: username
+}));
+
+//Получение сообщения от сервера
+socket.onmessage = function (event) {
+    let message = JSON.parse(event.data);
+    console.log(message);
+    if (message.operation == "image_background") {
+
+        let ctx = canvas.getContext('2d');
+
+        var image = new Image();
+        image.onload = function () {
+            ctx.drawImage(image, 0, 0, 100, 100);
+        };
+        image.src = "data:image/png;base64," + message.buffer;
+    }
+
+    if (message.operation == "size"){
+        console.log('----------------------');
+        console.log(message);
+        canvas.style.height = message.height + "px";
+        canvas.width = message.width + "px;"
+    }
+
+};

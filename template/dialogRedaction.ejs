@@ -1,0 +1,163 @@
+<% layout('layout/page')%>
+<% block('title', 'Редактор диалогов');%>
+
+<!--Ссылка на файл с модальными окнами-->
+<%include ./partial/moduleWindow %>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="dropdown">
+            <b>№ ШАГА </b>
+            <button id="buttonXML" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><%=idStep%></button>
+            <ul class= "dropdown-menu">
+                <%for(let i = 0; i < dirName.length; i++){%>
+                <li><a href="/dialogRedaction/<%=dirNumber[i]%>">
+                        <%=dirName[i]%>
+                    </a></li>
+                <%}%>
+                <li class="text-center"><a href="/dialogRedaction/newXML">+</a></li>
+            </ul>
+            <a id="deleteXMLFile" class="btn btn-default">Удалить</a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Текст фразы</th>
+                <th>Тип ответа</th>
+                <th>Следующая фраза</th>
+                <th>Баллы за выбор</th>
+                <th>№ этапа</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr >
+                <td colspan="6" class="text-center">Продавец</td>
+            </tr>
+            <% if (phrase.sale.seller[0].phrase != undefined) {%>
+            <%for (let i = 0; i < phrase.sale.seller[0].phrase.length; i++){ %>
+            <tr>
+                <td><%=i%></td>
+                <td><%=phrase.sale.seller[0].phrase[i].text.toString()%> </td>
+
+                <% if (phrase.sale.seller[0].phrase[i].next[0].correct != undefined){%>
+                <td>Правильный ответ</td>
+                <td>
+                    <% for (let j = 0; j < phrase.sale.seller[0].phrase[i].next[0].correct.length; j++){%>
+                    <%='' + phrase.sale.seller[0].phrase[i].next[0].correct[j] + ' '%>
+                    <%}%>
+                </td>
+                <%}%>
+
+                <% if (phrase.sale.seller[0].phrase[i].next[0].statisfaction != undefined){%>
+                <td>Удовлетворительный ответ</td>
+                <td>
+                    <% for (let j = 0; j < phrase.sale.seller[0].phrase[i].next[0].statisfaction.length; j++){%>
+                    <%=phrase.sale.seller[0].phrase[i].next[0].statisfaction[j]%>
+                    <%}%>
+                </td>
+                <%}%>
+
+                <% if (phrase.sale.seller[0].phrase[i].next[0].negative != undefined){%>
+                <td>Негативный ответ</td>
+                <td>
+                    <% for (let j = 0; j < phrase.sale.seller[0].phrase[i].next[0].negative.length; j++){%>
+                    <%=phrase.sale.seller[0].phrase[i].next[0].negative[j]%>
+                    <%}%>
+                </td>
+                <%}%>
+
+                <td><%=phrase.sale.seller[0].phrase[i].point%></td>
+                <%if (phrase.sale.seller[0].phrase[i].step){%>
+                <td><%=phrase.sale.seller[0].phrase[i].step%></td>
+                <%} else {%>
+                <td></td>
+                <%}%>
+            </tr>
+            <%}%>
+            <tr>
+                <td><%=phrase.sale.seller[0].phrase.length%></td>
+                <td colspan="6" class="text-center">Добавить фразу</td>
+            </tr>
+            <%} else {%>
+            <tr>
+                <td>0</td>
+                <td colspan="6" class="text-center">Добавить фразу</td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+            <tr>
+                <th>ID</th>
+                <th>Текст фразы</th>
+                <th>№ шага</th>
+                <th>ID корректного ответа</th>
+                <th>ID удовлетворительного ответа</th>
+                <th>ID негативного ответа</th>
+            </tr>
+            </tr>
+            </thead>
+            <tbody>
+            <tr >
+                <td colspan="6" class="text-center">Покупатель</td>
+            </tr>
+            <% if (phrase.sale.customer[0].phrase != undefined){ %>
+            <%for (let i = 0; i < phrase.sale.customer[0].phrase.length; i++){ %>
+            <tr>
+                <td><%=i%></td>
+                <td><%=phrase.sale.customer[0].phrase[i].text.toString()%></td>
+                <td><%=phrase.sale.customer[0].phrase[i].step.toString()%></td>
+
+                <td>
+                    <% if (phrase.sale.customer[0].phrase[i].next[0].correct){
+                    for (let j = 0; j < phrase.sale.customer[0].phrase[i].next[0].correct.length; j++){%>
+                    <%=phrase.sale.customer[0].phrase[i].next[0].correct[j]%>
+                    <%}}%>
+                </td>
+                <td>
+                    <% if (phrase.sale.customer[0].phrase[i].next[0].statisfaction){
+                    for (let j = 0; j < phrase.sale.customer[0].phrase[i].next[0].statisfaction.length; j++){%>
+                    <%=phrase.sale.customer[0].phrase[i].next[0].statisfaction[j]%>
+                    <%}}%>
+                </td>
+                <td>
+                    <% if (phrase.sale.customer[0].phrase[i].next[0].negative){
+                    for (let j = 0; j < phrase.sale.customer[0].phrase[i].next[0].negative.length; j++){%>
+                    <%=phrase.sale.customer[0].phrase[i].next[0].negative[j]%>
+                    <%}}%>
+                </td>
+
+            </tr>
+            <%}%>
+            <tr>
+                <td><%=phrase.sale.customer[0].phrase.length%></td>
+                <td colspan="6" class="text-center">Добавить фразу</td>
+            </tr>
+            <% } else {%>
+            <tr>
+                <td>0</td>
+                <td colspan="6" class="text-center">Добавить фразу</td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src = "../redaction/redaction.js"></script>

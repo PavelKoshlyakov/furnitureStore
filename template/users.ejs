@@ -1,0 +1,30 @@
+<% layout('layout/page')%>
+<% block('title', 'Пользователи');%>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>№ п/п</th>
+                <th>Логин</th>
+                <th>E-mail</th>
+                <th>Подтверждение E-mail</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <%for (let i = 0; i < users.length; i++){ %>
+            <tr>
+                <td><%=i%></td>
+                <td><%=users[i].username%></td>
+                <td><%=users[i].email%></td>
+                <td><%=users[i].validEmail%></td>
+                <td><a href="/deleteUser/<%=users[i].id%>">Удалить</a></td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</div>

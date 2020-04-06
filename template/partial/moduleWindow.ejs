@@ -1,0 +1,93 @@
+<div id = "phraseRedaction" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="text-center">Редактирование</p>
+        <form id="form">
+            <div id="id" class="form-group">
+                <p class="text-center">ID</p>
+                <input id="idRedaction" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1" readonly>
+            </div>
+            <div id="text" class="form-group">
+                <p class="text-center">Текст</p>
+                <textarea id="textRedaction" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1"></textarea>
+            </div>
+            <div id="select" class="form-group">
+                <p class="text-center">Тип ответа</p>
+                <select id="selectRedaction" class="form-control">
+                    <option>Правильный</option>
+                    <option>Удовлетворительный</option>
+                    <option>Негативный</option>
+                </select>
+            </div>
+            <div id="next" class="form-group">
+                <p class="text-center">ID ответа</p>
+                <input id="nextRedaction" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1">
+            </div>
+            <div id="points" class="form-group">
+                <p class="text-center">Количество очков за фразу</p>
+                <input id="pointsRedaction" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1">
+            </div>
+            <div id="step" class="form-group">
+                <p class="text-center">№ этапа</p>
+                <!--<input id="stepRedaction" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1">-->
+                <select id="selectXML" class="form-control">
+                    <option></option>
+                    <%for (let i = 1; i < dirName.length + 1; i++){%>
+                    <option><%=dirName[i - 1]%></option>
+                    <%}%>
+                </select>
+            </div>
+            <div class="row">
+                <button id="button" class="btn btn-default pull-right">Сохранить</button>
+                <button id="delete" class="btn btn-default pull-right">Удалить</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div id = "customerPhraseRedaction" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="text-center">Редактирование</p>
+        <form id="formCustomer">
+            <div id="idCustomer" class="form-group">
+                <p class="text-center">ID</p>
+                <input id="idRedactionCustomer" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1" readonly>
+            </div>
+            <div id="textCustomer" class="form-group">
+                <p class="text-center">Текст</p>
+                <textarea id="textRedactionCustomer" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1"></textarea>
+            </div>
+            <div id="stepCustomer" class="form-group">
+                <p class="text-center">№ этапа</p>
+                <!--<input id="stepRedaction" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1">-->
+                <select id="selectXMLCustomer" class="form-control">
+                    <option></option>
+                    <%for (let i = 1; i < dirName.length + 1; i++){%>
+                    <option><%=dirName[i - 1]%></option>
+                    <%}%>
+                </select>
+            </div>
+
+            <div id="correctCustomer" class="form-group">
+                <p class="text-center">ID корректного ответа</p>
+                <input id="correctAnswer" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1">
+            </div>
+            <div id="statisfactionCustomer" class="form-group">
+                <p class="text-center">ID удовлетворительного ответа</p>
+                <input id="statisfactionAnswer" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1">
+            </div>
+            <div id="negativeCustomer" class="form-group">
+                <p class="text-center">ID неправильного отета</p>
+                <input id="negativeAnswer" maxlength="300" class="form-control text-center" aria-describedby="sizing-addon1">
+            </div>
+
+            <div class="row">
+                <button id="buttonCustomer" class="btn btn-default pull-right">Сохранить</button>
+                <button id="deleteCustomer" class="btn btn-default pull-right">Удалить</button>
+            </div>
+
+        </form>
+    </div>
+</div>

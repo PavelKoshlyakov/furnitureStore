@@ -1,0 +1,36 @@
+<% layout('layout/page') %>
+<% block('title', 'Редактор игры'); %>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="row">
+            <p id="username" class="text-center" style="width: 100%"><%= user.username %></p>
+        </div>
+        <div class="row" style="width: 100%; text-align: center">
+            <canvas id="gameBoard" style="margin-left: auto; margin-right: auto;"></canvas>
+        </div>
+
+    </div>
+    <div class="col-md-2">
+        <form class="margin-bottom" enctype="multipart/form-data">
+            <p class="text-center">Высота поля</p>
+            <input id="height" name="height" maxlength="4" size="40" class="form-control text-center"
+                   aria-describedby="sizing-addon1">
+            <p class="text-center" style="margin-top: 10px">Ширина поля</p>
+            <input id="width" name="width" maxlength="4" size="40" class="form-control text-center margin-bottom"
+                   aria-describedby="sizing-addon1">
+            <div class="row">
+                <button id="button_size" style="width: 100%" type="submit">Применить</button>
+            </div>
+        </form>
+        <hr>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input class="margin-bottom" type="file" name="uploadedFile"/>
+            <input type="submit" value="Загрузить изображение"/>
+        </form>
+    </div>
+</div>
+
+
+<script src="../redaction/gameBuilder"></script>

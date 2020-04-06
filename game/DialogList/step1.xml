@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sale>
+    <seller>
+        
+<phrase id = "0">
+	<text>Добрый день, чем я могу Вам помочь?</text>
+	<step></step>
+	<point>2</point>
+	<next>
+		<correct>0</correct>
+		<correct>1</correct>
+		<correct>2</correct>
+		<correct>3</correct>
+	</next>
+</phrase>
+        
+<phrase id = "1">
+	<text>Здравствуйте, подсказать Вам что-нибудь?</text>
+	<step></step>
+	<point>2</point>
+	<next>
+		<correct>0</correct>
+		<correct>1</correct>
+		<correct>2</correct>
+		<correct>3</correct>
+	</next>
+</phrase>
+        <phrase id = "2">
+            <text>Добрый день, меня зовут Павел, могу я Вам чем-нибудь помочь?</text>
+            <point>2</point>
+            <next>
+                <correct>0</correct>
+                <correct>1</correct>
+                <correct>2</correct>
+                <correct>3</correct>
+            </next>
+        </phrase>
+        <phrase id = "3">
+            <text>Добрый день, чем я могу Вам помочь?</text>
+            <point>2</point>
+            <next>
+                <correct>0</correct>
+                <correct>1</correct>
+                <correct>2</correct>
+                <correct>3</correct>
+            </next>
+        </phrase>
+
+        <phrase id = "4">
+            <text>Здравствуйте</text>
+            <point>1</point>
+            <next>
+                <statisfaction>4</statisfaction>
+                <statisfaction>5</statisfaction>
+            </next>
+        </phrase>
+        <phrase id = "5">
+            <text>Добрый день</text>
+            <point>1</point>
+            <next>
+                <statisfaction>4</statisfaction>
+                <statisfaction>5</statisfaction>
+            </next>
+        </phrase>
+        <phrase id = "6">
+            <text>Приветствую</text>
+            <point>1</point>
+            <next>
+                <statisfaction>4</statisfaction>
+                <statisfaction>5</statisfaction>
+            </next>
+        </phrase>
+        <phrase id = "7">
+            <text>Вам подсказать что-нибудь?</text>
+            <point>1</point>
+            <next>
+                <statisfaction>4</statisfaction>
+                <statisfaction>5</statisfaction>
+            </next>
+        </phrase>
+
+        <phrase id = "8">
+            <text>(Игнорировать)</text>
+            <point>-1</point>
+            <next>
+                <negative>6</negative>
+            </next>
+        </phrase>
+        <phrase id = "9">
+            <text>(Ждать пока клиент сам к Вам обратиться)</text>
+            <point>-1</point>
+            <next>
+                <negative>6</negative>
+            </next>
+        </phrase>
+        <phrase id = "10">
+            <text>(Разговаривать по телефону)</text>
+            <point>-1</point>
+            <next>
+                <negative>6</negative>
+            </next>
+        </phrase>
+        <phrase id = "11">
+            <text>(Заниматься своими делами)</text>
+            <point>-1</point>
+            <next>
+                <negative>6</negative>
+            </next>
+        </phrase>
+
+    </seller>
+
+    <customer>
+        <phrase id = "0">
+            <text>Да, подскажите, мне нужен диван</text>
+            <!--Указывает на номер файла диалога, в котором будут храниться ID указанные далее-->
+            <step></step>
+            <!--Количество очков за выбранный ответ-->
+            <next>
+                <!--ID для корректного вопроса продавца-->
+                <correct>0</correct>
+                <correct>1</correct>
+                <correct>2</correct>
+                <correct>3</correct>
+                <!--ID для удовлетворительного вопроса продавца-->
+                <statisfaction>18</statisfaction>
+                <statisfaction>19</statisfaction>
+                <!--ID для негативного вопроса продавца-->
+                <negative>26</negative>
+                <negative>27</negative>
+            </next>
+        </phrase>
+        <phrase id = "1">
+            <text>Да, подскажите, мне нужна кровать</text>
+            <step></step>
+            <next>
+                <correct>4</correct>
+                <correct>5</correct>
+                <correct>6</correct>
+                <correct>7</correct>
+                <statisfaction>20</statisfaction>
+                <statisfaction>21</statisfaction>
+                <negative>28</negative>
+                <negative>27</negative>
+            </next>
+        </phrase>
+        <phrase id = "2">
+            <text>Да, подскажите, мне нужен шкаф</text>
+            <step></step>
+            <next>
+                <correct>8</correct>
+                <correct>9</correct>
+                <correct>10</correct>
+                <correct>11</correct>
+                <statisfaction>22</statisfaction>
+                <statisfaction>23</statisfaction>
+                <negative>29</negative>
+                <negative>27</negative>
+            </next>
+        </phrase>
+        <phrase id = "3">
+            <text>Да, подскажите, мне нужен стол</text>
+            <step></step>
+            <next>
+                <correct>12</correct>
+                <correct>13</correct>
+                <correct>14</correct>
+                <correct>15</correct>
+                <statisfaction>24</statisfaction>
+                <statisfaction>25</statisfaction>
+                <negative>30</negative>
+                <negative>27</negative>
+            </next>
+        </phrase>
+
+        <phrase id = "4">
+            <text>Здравствуйте</text>
+            <step></step>
+            <next>
+                <correct>16</correct>
+                <correct>17</correct>
+                <statisfaction>31</statisfaction>
+                <statisfaction>32</statisfaction>
+                <negative>33</negative>
+                <negative>34</negative>
+            </next>
+        </phrase>
+        <phrase id = "5">
+            <text>Добрый день</text>
+            <step></step>
+            <next>
+                <correct>16</correct>
+                <correct>17</correct>
+                <statisfaction>31</statisfaction>
+                <statisfaction>32</statisfaction>
+                <negative>33</negative>
+                <negative>34</negative>
+            </next>
+        </phrase>
+        <phrase id = "6">
+            <text>(Клиент ушёл)</text>
+            <step>100</step>
+            <next>
+            </next>
+        </phrase>
+    
+</customer>
+</sale>

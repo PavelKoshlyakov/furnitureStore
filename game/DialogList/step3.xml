@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sale>
+    <seller>
+        <phrase id = "0">
+            <text>Конечно,  у нас есть в наличии такие диваны. Вот, есть такой диван (показать), мне кажется, это как раз то, что Вам нужно. Также у нас есть такой вариант (показать)</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>0</correct>
+                <correct>1</correct>
+                <correct>2</correct>
+                <correct>3</correct>
+            </next>
+        </phrase>
+        <phrase id = "1">
+            <text>Такие кровати у нас есть. Вот интересная модель: она сделана из натурального дерева, покрытого лаком. При этом, все крепёжные соединения довольно надёжные</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>4</correct>
+                <correct>5</correct>
+            </next>
+        </phrase>
+        <phrase id = "2">
+            <text>Вот, посмотрите, есть такой (показать) отличный вариант. У этой кровати есть выдвижные ящики, где можно хранить одежду. Ещё у неё довольно высокий подголовник и стенка, которая предотвратит
+                стиранее обоев!</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>4</correct>
+                <correct>5</correct>
+            </next>
+        </phrase>
+        <phrase id = "3">
+            <text>Скажите, а Вам такой шкаф нужен в гостевую или в прихожую? Если в гостевую, то есть такой (показать) красивый вариант со стеклянными дверцами. Если в прихожую, то есть два отличных шкафа:
+                один тёмно-вишневого цвета, другой бежевого. Если цвет Вас не устраивает, мы можем на заказ привезти шкаф нужного цвета</text>
+
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>6</correct>
+                <correct>7</correct>
+                <correct>8</correct>
+            </next>
+        </phrase>
+        <phrase id = "4">
+            <text>Вот (показать) вместительный шкаф из хороших материалов. Такой шкаф прослужить вам не менее 20 лет, я гарантирую!</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>6</correct>
+                <correct>7</correct>
+                <correct>8</correct>
+            </next>
+        </phrase>
+        <phrase id = "5">
+            <text>Под Ваши критерии я бы посоветовал(а) присмотреться к данной модели(показать). Всё как Вы и хотели, он широкий и узкий, имеет зеркало высотой 1,5 метра. Идеально подойдёт для того, чтобы оценить
+                Ваш образ целиком.</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>6</correct>
+                <correct>7</correct>
+                <correct>8</correct>
+            </next>
+        </phrase>
+        <phrase id = "6">
+            <text>Могу предложить Вам эту модель (показать). Это шкаф-купе, он достаточно широкий, у него большой отсек для хранения верхней одежды и два больших зеркала. Как вам?</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>6</correct>
+                <correct>7</correct>
+                <correct>8</correct>
+            </next>
+        </phrase>
+        <phrase id = "7">
+            <text>Могу предложить Вам эту модель (показать). Круглый стол, сделанный из стекла, в основе имеющий металлический каркас</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>9</correct>
+                <correct>10</correct>
+                <correct>11</correct>
+            </next>
+        </phrase>
+        <phrase id = "8">
+            <text>Вот, посмотрите, круглый стол, 1,5 метра в диаметре. Он полностью покрыт лаком и его можно разложить, что позволит всем удобно и свободно сидеть когда приезжают гости</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>9</correct>
+                <correct>10</correct>
+                <correct>11</correct>
+            </next>
+        </phrase>
+        <phrase id = "9">
+            <text>Могу предложить Вам отличный стеклянный стол. Он большой, обрамлённый плетёными элементами, которые смотрятся очень стильно.</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>9</correct>
+                <correct>10</correct>
+                <correct>11</correct>
+            </next>
+        </phrase>
+        <phrase id = "10">
+            <text>Могу предложить Вам эту модель (показать). Этот широкий стол обработан специальным покрытием, защищающим его от повышенной влажности, в результате чего он прослужит Вам долгое время!</text>
+            <step></step>
+            <point>2</point>
+            <next>
+                <correct>9</correct>
+                <correct>10</correct>
+                <correct>11</correct>
+            </next>
+        </phrase>
+
+        <phrase id = "11">
+            <text>Вот, посмотрите, у нас такой асортимент</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction>0</statisfaction>
+                <statisfaction>1</statisfaction>
+                <statisfaction>2</statisfaction>
+                <statisfaction>3</statisfaction>
+            </next>
+        </phrase>
+        <phrase id = "12">
+            <text>Есть такой (показать) и такой(показать)</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction>0</statisfaction>
+                <statisfaction>1</statisfaction>
+                <statisfaction>2</statisfaction>
+                <statisfaction>3</statisfaction>
+            </next>
+        </phrase>
+
+        <phrase id = "13">
+            <text>Мне это всё до лампочки</text>
+            <step>1</step>
+            <point>-1</point>
+            <next>
+                <negative>6</negative>
+            </next>
+        </phrase>
+        <phrase id = "14">
+            <text>Пойди и посмотри</text>
+            <step>1</step>
+            <point>-1</point>
+            <next>
+                <negative>6</negative>
+            </next>
+        </phrase>
+
+        <phrase id = "15">
+            <text>У нас большой выбор диванов. Есть такие модели (показать) и такие (показать). Какой бы именно диван Вы хотели?</text>
+            <step>2</step>
+            <point>2</point>
+            <next>
+                <correct>0</correct>
+                <correct>1</correct>
+                <correct>2</correct>
+                <correct>3</correct>
+            </next>
+        </phrase>
+        <phrase id = "16">
+            <text>У нас большой выбор кроватей. Есть такие модели (показать) и такие (показать). Какую бы именно Вы хотели?</text>
+            <step>2</step>
+            <point>2</point>
+            <next>
+                <correct>4</correct>
+                <correct>5</correct>
+                <correct>6</correct>
+                <correct>7</correct>
+            </next>
+        </phrase>
+        <phrase id = "17">
+            <text>У нас большой выбор шкафов. Есть такие модели (показать) и такие (показать). Какой бы именно шкаф Вы хотели?</text>
+            <step>2</step>
+            <point>2</point>
+            <next>
+                <correct>8</correct>
+                <correct>9</correct>
+                <correct>10</correct>
+                <correct>11</correct>
+            </next>
+        </phrase>
+        <phrase id = "18">
+            <text>У нас большой выбор столов. Есть такие модели (показать) и такие (показать). Какой бы именно стол Вы хотели?</text>
+            <step>2</step>
+            <point>2</point>
+            <next>
+                <correct>12</correct>
+                <correct>13</correct>
+                <correct>14</correct>
+                <correct>15</correct>
+            </next>
+        </phrase>
+
+        <!--Диван-->
+        <phrase id = "19">
+            <text>Вот, посмотрите, у нас такой асортимент</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction>0</statisfaction>
+                <statisfaction>1</statisfaction>
+                <statisfaction>2</statisfaction>
+                <statisfaction>3</statisfaction>
+            </next>
+        </phrase>
+        <!--Кровать-->
+        <phrase id = "20">
+            <text>Вот, посмотрите, у нас такой асортимент</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction></statisfaction>
+            </next>
+        </phrase>
+        <!--Шкаф-->
+        <phrase id = "21">
+            <text>Вот, посмотрите, у нас такой асортимент</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction></statisfaction>
+            </next>
+        </phrase>
+        <!--Стол-->
+        <phrase id = "22">
+            <text>Вот, посмотрите, у нас такой асортимент</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction></statisfaction>
+            </next>
+        </phrase>
+
+        <!--Диван-->
+        <phrase id = "23">
+            <text>У нас есть вот такие диваны</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction>0</statisfaction>
+                <statisfaction>1</statisfaction>
+                <statisfaction>2</statisfaction>
+                <statisfaction>3</statisfaction>
+            </next>
+        </phrase>
+
+        <!--Кровать-->
+        <phrase id = "24">
+            <text>У нас есть вот такие кровати</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction>0</statisfaction>
+                <statisfaction>1</statisfaction>
+                <statisfaction>2</statisfaction>
+                <statisfaction>3</statisfaction>
+            </next>
+        </phrase>
+        <!--Шкаф-->
+        <phrase id = "25">
+            <text>У нас есть вот такие шкафы</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction>0</statisfaction>
+                <statisfaction>1</statisfaction>
+                <statisfaction>2</statisfaction>
+                <statisfaction>3</statisfaction>
+            </next>
+        </phrase>
+        <!--Стол-->
+        <phrase id = "26">
+            <text>У нас есть вот такие столы</text>
+            <step></step>
+            <point>1</point>
+            <next>
+                <statisfaction>0</statisfaction>
+                <statisfaction>1</statisfaction>
+                <statisfaction>2</statisfaction>
+                <statisfaction>3</statisfaction>
+            </next>
+        </phrase>
+        <!--<phrase id = "">-->
+        <!--<text>Мне кажется, я знаю, что могло бы Вам подойти. Давайте посмотрим несколько моделей, которые наиболее точно соответствуют Вашему запросу?</text>-->
+        <!--<step></step>-->
+        <!--<point>2</point>-->
+        <!--<next>-->
+
+        <!--</next>-->
+        <!--</phrase>-->
+    </seller>
+
+    <customer>
+        <phrase id = "0">
+            <text>Отлично, он мне нравится. Сколько он стоит?</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "1">
+            <text>Хорошие диваны. Я подумаю, какой мне выбрать</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "2">
+            <text>Отлично, мне нравится этот диван. Сколько он стоит?</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "3">
+            <text>Мне они не очень нравятся</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "4">
+            <text>Хорошие кровати. Я подумаю, какую из них лучше выбрать</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "5">
+            <text>Мне нравится вот эта кровать. Насколько она надёжна?</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "6">
+            <text>Мне нравится вот этот шкаф. Насколько он надёжен?</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "7">
+            <text>Интересные модели. Я подумаю, какой шкаф мне лучше выбрать</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "8">
+            <text>Мне не нравятся эти варианты</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "9">
+            <text>Мне не нравятся эти варианты</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "10">
+            <text>Интересные модели. Я подумаю, какой стол мне лучше выбрать</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+        <phrase id = "11">
+            <text>Мне нравится этот стол. Он надёжный?</text>
+            <step></step>
+            <next>
+                <correct></correct>
+                <statisfaction></statisfaction>
+                <statisfaction></statisfaction>
+                <negative></negative>
+                <negative></negative>
+            </next>
+        </phrase>
+    </customer>
+</sale>
